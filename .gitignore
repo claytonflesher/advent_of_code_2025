@@ -21,3 +21,37 @@ advent_of_code_2025-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Environment variables
+.env
+.envrc
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Private onboarding documentation
+ONBOARDING.md
+
+# Puzzle inputs (personal and unique to each user)
+inputs/
+
+# Personal notes or scratch files
+notes.md
+scratch.ex
+TODO.md
