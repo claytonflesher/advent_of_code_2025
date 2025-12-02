@@ -167,9 +167,7 @@ defmodule AdventOfCode2025.Day02 do
     case File.read("inputs/day02.txt") do
       {:ok, content} -> content
       {:error, _} ->
-        """
-        # Add your input here when available
-        """
+        raise "Could not read input file for Day 2"
     end
   end
 end
