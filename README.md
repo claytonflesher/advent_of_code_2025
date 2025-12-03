@@ -42,6 +42,19 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 | Day | Part 1 | Part 2 | Notes |
 |-----|--------|--------|-------|
 | [01](lib/day01.ex) | ⭐ | ⭐ | Safe dial rotation simulation |
+| [02](lib/day02.ex) | ⭐ | ⭐ | Gift shop invalid product IDs |
+| [03](lib/day03.ex) | ⭐ | ⭐ | Battery bank joltage optimization |
+| [04](lib/day04.ex) | 🔒 | 🔒 | Ready to implement |
+| [05](lib/day05.ex) | 🔒 | 🔒 | Ready to implement |
+| [06](lib/day06.ex) | 🔒 | 🔒 | Ready to implement |
+| [07](lib/day07.ex) | 🔒 | 🔒 | Ready to implement |
+| [08](lib/day08.ex) | 🔒 | 🔒 | Ready to implement |
+| [09](lib/day09.ex) | 🔒 | 🔒 | Ready to implement |
+| [10](lib/day10.ex) | 🔒 | 🔒 | Ready to implement |
+| [11](lib/day11.ex) | 🔒 | 🔒 | Ready to implement |
+| [12](lib/day12.ex) | 🔒 | 🔒 | Ready to implement |
+
+**Total Stars: ⭐⭐⭐⭐⭐⭐ (6/48)**
 
 ### Day 1: Secret Entrance
 
@@ -54,6 +67,26 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 - Dial positions are 0-99 in a circle (modular arithmetic)
 - Part 2 requires tracking intermediate positions during each rotation
 - Large rotations can pass through 0 multiple times
+
+### Day 2: Gift Shop
+
+**Problem**: Detect invalid product IDs based on repeated character patterns.
+
+- **Part 1**: Count IDs with exact repetitions (same character, same count)
+- **Part 2**: Count IDs with flexible repetitions (same character, any count ≥ original)
+
+### Day 3: Lobby
+
+**Problem**: Optimize battery bank configurations to maximize joltage output.
+
+- **Part 1**: Select exactly 2 batteries from each bank to maximize 2-digit joltage
+- **Part 2**: Select exactly 12 batteries from each bank to maximize 12-digit joltage
+
+**Key insights**:
+- Part 1 uses combinatorial search for small selections
+- Part 2 uses greedy "remove k digits" algorithm for efficiency
+- Maintaining positional order is crucial for maximizing numerical value
+- Algorithm scales from 15-digit sample banks to 100-digit actual input
 
 ## Running Solutions
 

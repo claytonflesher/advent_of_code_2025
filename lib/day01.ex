@@ -190,9 +190,7 @@ Using password method 0x434C49434B, what is the password to open the door?
     case File.read("inputs/day01.txt") do
       {:ok, content} -> content
       {:error, _} ->
-        """
-        # Add your input here when available
-        """
+        raise "Could not read input file for Day 1"
     end
   end
 end
