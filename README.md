@@ -44,8 +44,8 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 | [01](lib/day01.ex) | ⭐ | ⭐ | Safe dial rotation simulation |
 | [02](lib/day02.ex) | ⭐ | ⭐ | Gift shop invalid product IDs |
 | [03](lib/day03.ex) | ⭐ | ⭐ | Battery bank joltage optimization |
-| [04](lib/day04.ex) | 🔒 | 🔒 | Ready to implement |
-| [05](lib/day05.ex) | 🔒 | 🔒 | Ready to implement |
+| [04](lib/day04.ex) | ⭐ | ⭐ | Forklift paper roll accessibility |
+| [05](lib/day05.ex) | ⭐ | ⭐ | Fresh ingredient ID range analysis |
 | [06](lib/day06.ex) | 🔒 | 🔒 | Ready to implement |
 | [07](lib/day07.ex) | 🔒 | 🔒 | Ready to implement |
 | [08](lib/day08.ex) | 🔒 | 🔒 | Ready to implement |
@@ -54,7 +54,7 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 | [11](lib/day11.ex) | 🔒 | 🔒 | Ready to implement |
 | [12](lib/day12.ex) | 🔒 | 🔒 | Ready to implement |
 
-**Total Stars: ⭐⭐⭐⭐⭐⭐ (6/48)**
+**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (10/48)**
 
 ### Day 1: Secret Entrance
 
@@ -86,6 +86,29 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 - Part 1 uses combinatorial search for small selections
 - Part 2 uses greedy "remove k digits" algorithm for efficiency
 - Maintaining positional order is crucial for maximizing numerical value
+### Day 4: Printing Department
+
+**Problem**: Optimize forklift operations by identifying accessible paper rolls.
+
+- **Part 1**: Count paper rolls with fewer than 4 adjacent rolls (accessible by forklifts)
+- **Part 2**: Simulate iterative removal of accessible rolls until no more can be removed
+
+**Key insights**:
+- Grid-based neighbor counting in 8 directions
+- Iterative simulation with cascading effects
+- Efficient position-based grid representation as maps
+
+### Day 5: Cafeteria
+
+**Problem**: Analyze ingredient freshness using ID ranges and databases.
+
+- **Part 1**: Count available ingredient IDs that fall within fresh ingredient ranges
+- **Part 2**: Calculate total count of all ingredient IDs covered by fresh ranges
+
+**Key insights**:
+- Range intersection and membership testing
+- Merging overlapping ranges to avoid double-counting
+- Efficient range arithmetic for large number spaces
 - Algorithm scales from 15-digit sample banks to 100-digit actual input
 
 ## Running Solutions
