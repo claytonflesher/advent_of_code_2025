@@ -46,7 +46,7 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 | [03](lib/day03.ex) | ⭐ | ⭐ | Battery bank joltage optimization |
 | [04](lib/day04.ex) | ⭐ | ⭐ | Forklift paper roll accessibility |
 | [05](lib/day05.ex) | ⭐ | ⭐ | Fresh ingredient ID range analysis |
-| [06](lib/day06.ex) | 🔒 | 🔒 | Ready to implement |
+| [06](lib/day06.ex) | ⭐ | ⭐ | Cephalopod math worksheet problems |
 | [07](lib/day07.ex) | 🔒 | 🔒 | Ready to implement |
 | [08](lib/day08.ex) | 🔒 | 🔒 | Ready to implement |
 | [09](lib/day09.ex) | 🔒 | 🔒 | Ready to implement |
@@ -54,7 +54,7 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 | [11](lib/day11.ex) | 🔒 | 🔒 | Ready to implement |
 | [12](lib/day12.ex) | 🔒 | 🔒 | Ready to implement |
 
-**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (10/48)**
+**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (12/48)**
 
 ### Day 1: Secret Entrance
 
@@ -86,6 +86,7 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 - Part 1 uses combinatorial search for small selections
 - Part 2 uses greedy "remove k digits" algorithm for efficiency
 - Maintaining positional order is crucial for maximizing numerical value
+
 ### Day 4: Printing Department
 
 **Problem**: Optimize forklift operations by identifying accessible paper rolls.
@@ -110,6 +111,19 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 - Merging overlapping ranges to avoid double-counting
 - Efficient range arithmetic for large number spaces
 - Algorithm scales from 15-digit sample banks to 100-digit actual input
+
+### Day 6: Trash Compactor
+
+**Problem**: Solve cephalopod math worksheets with column-based number arrangements.
+
+- **Part 1**: Parse problems arranged vertically in columns, solve with standard math
+- **Part 2**: Apply cephalopod math - read columns right-to-left, numbers formed by character positions
+
+**Key insights**:
+- Column detection using space-separated boundaries  
+- Character position-based parsing for Part 2
+- Right-to-left problem ordering with top-to-bottom digit reading
+- Same input, different interpretation between parts
 
 ## Running Solutions
 
