@@ -47,14 +47,15 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 | [04](lib/day04.ex) | ⭐ | ⭐ | Forklift paper roll accessibility |
 | [05](lib/day05.ex) | ⭐ | ⭐ | Fresh ingredient ID range analysis |
 | [06](lib/day06.ex) | ⭐ | ⭐ | Cephalopod math worksheet problems |
-| [07](lib/day07.ex) | 🔒 | 🔒 | Ready to implement |
+| [07](lib/day07.ex) | ⭐ | ⭐ | Quantum tachyon manifold beam splitting |
+| [08](lib/day08.ex) | ⭐ | ⭐ | Playground junction box circuit building |
 | [08](lib/day08.ex) | 🔒 | 🔒 | Ready to implement |
 | [09](lib/day09.ex) | 🔒 | 🔒 | Ready to implement |
 | [10](lib/day10.ex) | 🔒 | 🔒 | Ready to implement |
 | [11](lib/day11.ex) | 🔒 | 🔒 | Ready to implement |
 | [12](lib/day12.ex) | 🔒 | 🔒 | Ready to implement |
 
-**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (12/48)**
+**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (16/50)**
 
 ### Day 1: Secret Entrance
 
@@ -124,6 +125,19 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 - Character position-based parsing for Part 2
 - Right-to-left problem ordering with top-to-bottom digit reading
 - Same input, different interpretation between parts
+
+### Day 7: Laboratories
+
+**Problem**: Simulate tachyon beam splitting through a manifold with splitters.
+
+- **Part 1**: Count the number of beam splits when beams hit splitters (^)
+- **Part 2**: Count quantum timelines using many-worlds interpretation
+
+**Key insights**:
+- Tachyon beams move downward and split at splitters into left/right beams
+- Part 1 tracks splitter activations to count total splits
+- Part 2 uses memoization to handle exponential timeline growth efficiently
+- Quantum particles create two timelines at each splitter (left and right paths)
 
 ## Running Solutions
 
