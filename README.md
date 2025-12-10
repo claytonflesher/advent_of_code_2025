@@ -49,13 +49,11 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 | [06](lib/day06.ex) | ⭐ | ⭐ | Cephalopod math worksheet problems |
 | [07](lib/day07.ex) | ⭐ | ⭐ | Quantum tachyon manifold beam splitting |
 | [08](lib/day08.ex) | ⭐ | ⭐ | Playground junction box circuit building |
-| [08](lib/day08.ex) | 🔒 | 🔒 | Ready to implement |
-| [09](lib/day09.ex) | 🔒 | 🔒 | Ready to implement |
-| [10](lib/day10.ex) | 🔒 | 🔒 | Ready to implement |
-| [11](lib/day11.ex) | 🔒 | 🔒 | Ready to implement |
-| [12](lib/day12.ex) | 🔒 | 🔒 | Ready to implement |
+| [09](lib/day09.ex) | ⭐ | ⭐ | Movie theater red/green tile rectangles |
+| [10](lib/day10.ex) | ⭐ | ⭐ | Factory joltage counter calibration |
+| 11 | 🔒 | 🔒 | Unlocks December 11 |
 
-**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (16/50)**
+**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (20/24)**
 
 ### Day 1: Secret Entrance
 
@@ -138,6 +136,40 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 - Part 1 tracks splitter activations to count total splits
 - Part 2 uses memoization to handle exponential timeline growth efficiently
 - Quantum particles create two timelines at each splitter (left and right paths)
+
+### Day 8: Playground
+
+**Problem**: Build circuits connecting components in a junction box using wires.
+
+- **Part 1**: Count connected components (islands) in the wiring diagram
+- **Part 2**: Find longest path through the circuit from start to end
+
+### Day 9: Movie Theater
+
+**Problem**: Find the largest rectangle using red tiles as corners on a theater floor.
+
+- **Part 1**: Find largest rectangle using any two red tiles as opposite corners
+- **Part 2**: Find largest rectangle where all tiles are red or green (connected by green paths)
+
+**Key insights**:
+- Red tiles form a closed rectilinear polygon with green connection tiles between them
+- Part 1 uses simple area calculation with inclusive bounds
+- Part 2 uses polygon edge crossing detection to efficiently filter valid rectangles
+- For large inputs, checking if polygon edges cross the rectangle interior is much faster than checking every tile
+
+### Day 10: Factory
+
+**Problem**: Find minimum button presses to calibrate joltage counters on factory machines.
+
+- **Part 1**: Count all lights that are ON after toggling sequences
+- **Part 2**: Minimize total button presses to reach target joltage values
+
+**Key insights**:
+- Part 2 is an Integer Linear Programming problem: minimize Σxᵢ subject to Ax = b, x ≥ 0
+- Gauss-Jordan elimination reduces the system to RREF, identifying pivot and free variables
+- Branch-and-bound search explores free variable assignments with pruning
+- Parallel processing using `Task.async_stream` speeds up multi-machine solving
+- Rational arithmetic avoids floating-point precision issues
 
 ## Running Solutions
 
