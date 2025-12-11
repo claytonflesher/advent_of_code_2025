@@ -51,9 +51,10 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 | [08](lib/day08.ex) | ⭐ | ⭐ | Playground junction box circuit building |
 | [09](lib/day09.ex) | ⭐ | ⭐ | Movie theater red/green tile rectangles |
 | [10](lib/day10.ex) | ⭐ | ⭐ | Factory joltage counter calibration |
-| 11 | 🔒 | 🔒 | Unlocks December 11 |
+| [11](lib/day11.ex) | ⭐ | ⭐ | Reactor device path counting |
+| 12 | 🔒 | 🔒 | Unlocks December 12 |
 
-**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (20/24)**
+**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (22/50)**
 
 ### Day 1: Secret Entrance
 
@@ -168,6 +169,21 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 - Part 2 is an Integer Linear Programming problem: minimize Σxᵢ subject to Ax = b, x ≥ 0
 - Gauss-Jordan elimination reduces the system to RREF, identifying pivot and free variables
 - Branch-and-bound search explores free variable assignments with pruning
+- Parallel processing using `Task.async_stream` speeds up multi-machine solving
+- Rational arithmetic avoids floating-point precision issues
+
+### Day 11: Reactor
+
+**Problem**: Count paths through a directed graph of devices from server to reactor output.
+
+- **Part 1**: Count all paths from "you" to "out"
+- **Part 2**: Count paths from "svr" to "out" that visit both "dac" and "fft"
+
+**Key insights**:
+- Simple recursive path counting for Part 1
+- Memoization with `{node, remaining_required}` as cache key for Part 2
+- Required nodes are tracked as a MapSet, removed as they're visited
+- Without memoization, the exponential path count (358+ trillion) would be infeasible
 - Parallel processing using `Task.async_stream` speeds up multi-machine solving
 - Rational arithmetic avoids floating-point precision issues
 

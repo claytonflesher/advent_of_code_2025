@@ -5,8 +5,6 @@ defmodule AdventOfCode2025.Day10 do
   Part 1: Count lights that are ON after toggling sequences.
   Part 2: Find minimum button presses to reach target joltage values using
   Gauss-Jordan elimination and branch-and-bound search.
-  @doc """
-  Solves part 1 of the day 10 puzzle.
   """
   def part1(input) do
     input
