@@ -84,7 +84,7 @@ defmodule AdventOfCode2025.Day09 do
       interior_tiles = find_inside_polygon_tiles(red_tiles, connection_tiles)
       valid_tiles_set = MapSet.union(MapSet.new(red_tiles), MapSet.union(connection_tiles, interior_tiles))
 
-      IO.puts "Found #{MapSet.size(valid_tiles_set)} valid tiles (#{length(red_tiles)} red + #{MapSet.size(connection_tiles)} connection + #{MapSet.size(interior_tiles)} interior)"
+      :ok
 
       red_tiles
       |> combinations(2)
@@ -108,7 +108,7 @@ defmodule AdventOfCode2025.Day09 do
     connection_tiles = find_connection_tiles(red_tiles)
     edges = Enum.zip(red_tiles, Enum.drop(red_tiles, 1) ++ [hd(red_tiles)])
 
-    IO.puts "Checking rectangles on-demand for #{length(red_tiles)} red tiles"
+    :ok
 
     # Optimized approach for rectilinear polygons:
     # A rectangle is fully inside if:
