@@ -52,9 +52,9 @@ mix run -e "IO.puts(AdventOfCode2025.Day01.part1(AdventOfCode2025.Day01.read_inp
 | [09](lib/day09.ex) | ⭐ | ⭐ | Movie theater red/green tile rectangles |
 | [10](lib/day10.ex) | ⭐ | ⭐ | Factory joltage counter calibration |
 | [11](lib/day11.ex) | ⭐ | ⭐ | Reactor device path counting |
-| [12](lib/day12.ex) | ⭐ | — | Christmas Tree Farm present packing |
+| [12](lib/day12.ex) | ⭐ | ⭐ | Christmas Tree Farm present packing |
 
-**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (23/50)**
+**Total Stars: ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ (24/24)**
 
 ### Day 1: Secret Entrance
 
